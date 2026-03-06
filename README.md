@@ -133,18 +133,24 @@ Three materialized views serving different business audiences:
 ## Project Structure
 
 ```
-├── data_generators/
-│   ├── config.py                  # shared ID pools and constants
-│   ├── data_generator.ipynb       # generates batch CSVs for S3
-│   └── event_generator.ipynb      # streaming producer (writes JSONL to Volume)
-├── pipelines/
-│   ├── bronze.py                  # Auto Loader ingestion
-│   ├── silver.py                  # cleaning and transformations
-│   └── gold.sql                   # business aggregations
-├── databricks.yml                 # DABs configuration
-└── README.md
-```
+e2e_databricks/                          # data generation scripts
+├── scripts/
+│   ├── config.py                        # shared ID pools and constants
+│   ├── data_generator.ipynb             # generates batch CSVs for S3
+│   └── event_generator.ipynb            # streaming producer (writes JSONL to Volume)
 
+e2e_bundle/                              # Databricks Asset Bundle
+├── resources/
+│   ├── etl.pipeline.yml                 # DLT pipeline definition
+│   └── main_job.job.yml                 # Lakeflow Job definition
+└── src/E2E_ETL/
+    ├── ingestion/
+    │   ├── s3_ingest.py                 # Auto Loader ingestion from S3 (Bronze)
+    │   └── stream_event_ingest.py       # Auto Loader ingestion from Volume (Bronze events)
+    └── transformations/
+        ├── silver_transformations.py    # cleaning, deduplication, typing (Silver)
+        └── gold_layer.sql               # business aggregations (Gold)
+```
 ---
 
 ## Orchestration
