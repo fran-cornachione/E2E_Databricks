@@ -1,6 +1,6 @@
 # Databricks E2E Project
 
-End-to-end data engineering project simulating a mid-size e-commerce company. Built on Databricks using modern DE tooling: Auto Loader, Spark Declarative Pipelines, Delta Lake, Unity Catalog, and Lakeflow Jobs.
+End-to-end data engineering project simulating a small-size e-commerce company. Built on Databricks using modern DE tooling: Auto Loader, Spark Declarative Pipelines, Delta Lake, Unity Catalog, and Lakeflow Jobs.
 
 - **Ingestion:** Auto Loader
 - **ETL:** Spark Declarative Pipelines
