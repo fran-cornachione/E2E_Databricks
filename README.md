@@ -5,7 +5,7 @@ End-to-end data engineering project simulating a mid-size e-commerce company. Bu
 - **Ingestion:** Auto Loader
 - **ETL:** Spark Declarative Pipelines
 - **Storage:** Delta Lake
-- **Governance: Unity Catalog
+- **Governance:** Unity Catalog
 - **Orchestration:** and Lakeflow Jobs.
 
 ---
