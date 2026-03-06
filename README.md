@@ -101,7 +101,7 @@ Cleaned and typed tables. Key transformations:
 
 Invalid records are dropped via DLT Expectations and logged:
 
-![Expectations](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXuOuVjhXgAOtc8Il49yg4Z06uPegQhNkAEQ&s](https://docs.databricks.com/aws/en/assets/images/expectations-flow-graph-02ab5dd2011b18ad791c67c0e8449af6.png)
+![Expectations](https://docs.databricks.com/aws/en/assets/images/expectations-flow-graph-02ab5dd2011b18ad791c67c0e8449af6.png)
 
 ```python
 @dlt.expect_or_drop("valid_age",        "age BETWEEN 0 AND 120")
