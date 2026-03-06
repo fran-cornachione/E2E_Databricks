@@ -168,6 +168,9 @@ databricks bundle deploy --target dev
 databricks bundle run e2e_bundle
 ```
 
+Or, deploy directly from the Databricks UI:
+- Workspace → Create → Git Folder → Clone this repo → Create → Asset Bundle 
+
 **Generate data:**
 1. Upload `config.py` to your Databricks workspace
 2. Run `data_generator.ipynb` to populate S3 with batch CSVs
