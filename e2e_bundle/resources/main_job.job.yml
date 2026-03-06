@@ -1,0 +1,21 @@
+resources:
+  jobs:
+    E2E_Job:
+      name: E2E_Job
+      email_notifications:
+        on_failure:
+          - cornachofrance@gmail.com
+        no_alert_for_skipped_runs: true
+      notification_settings:
+        no_alert_for_skipped_runs: true
+      trigger:
+        pause_status: UNPAUSED
+        periodic:
+          interval: 1
+          unit: DAYS
+      tasks:
+        - task_key: Run_pipeline
+          pipeline_task:
+            pipeline_id: f78c579e-2bd3-48cd-b656-06c7f2319c40
+            full_refresh: false
+      performance_target: PERFORMANCE_OPTIMIZED

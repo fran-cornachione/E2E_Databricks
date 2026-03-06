@@ -1,0 +1,17 @@
+resources:
+  pipelines:
+    pipeline_e2e_etl:
+      name: E2E_ETL
+      libraries:
+        - glob:
+            include: /Workspace/Users/cornachofrance@gmail.com/E2E_ETL/ingestion/**
+        - glob:
+            include: /Workspace/Users/cornachofrance@gmail.com/E2E_ETL/transformations/**
+      schema: bronze
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: e2e_databricks
+      serverless: true
+      root_path: /Workspace/Users/cornachofrance@gmail.com/E2E_ETL
